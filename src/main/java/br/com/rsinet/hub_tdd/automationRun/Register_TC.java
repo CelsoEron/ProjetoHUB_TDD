@@ -1,14 +1,17 @@
 package br.com.rsinet.hub_tdd.automationRun;
 
+import java.awt.print.Printable;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.results.PrintableResult;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import br.com.rsinet.hub_tdd.appModules.Register_Action;
+import br.com.rsinet.hub_tdd.utils.Screenshot;
 import junit.framework.AssertionFailedError;
 
 public class Register_TC {
@@ -26,6 +29,7 @@ public class Register_TC {
 		Register_Action.Execute(driver);
 
 		Assert.assertEquals("http://advantageonlineshopping.com/#/", driver.getCurrentUrl());
+		Screenshot.captureScreenShot(driver);
 	}
 	
 	@Test
@@ -34,6 +38,7 @@ public class Register_TC {
 		Register_Action.ExecuteInvalid(driver);
 		
 		Assert.assertEquals("http://advantageonlineshopping.com/#/register", driver.getCurrentUrl());
+		Screenshot.captureScreenShot(driver);
 	}
 
 	@AfterClass

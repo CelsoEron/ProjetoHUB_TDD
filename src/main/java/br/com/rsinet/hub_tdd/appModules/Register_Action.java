@@ -1,7 +1,5 @@
 package br.com.rsinet.hub_tdd.appModules;
 
-import static junit.framework.Assert.assertEquals;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,9 +21,9 @@ public class Register_Action {
 		JavascriptExecutor jsExec = (JavascriptExecutor) driver;
 		jsExec.executeScript("arguments[0].click();", Home_Page.btnCreate(driver));
 
-		Register_Page.bx_username(driver).sendKeys("testv112");
+		Register_Page.bx_username(driver).sendKeys("testv17");
 
-		Register_Page.bx_email(driver).sendKeys("test112@test.com");
+		Register_Page.bx_email(driver).sendKeys("test1207@test.com");
 
 		Register_Page.bx_password(driver).sendKeys("Test1234");
 
@@ -51,7 +49,7 @@ public class Register_Action {
 
 		Register_Page.btn_register(driver).click();
 
-		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txtUser(driver), "testv112"));
+		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txtUser(driver), "testv17"));
 
 	}
 
