@@ -98,11 +98,4 @@ public class Register_Page {
 		return element;
 	}
 
-	public static String invalidRegister(WebDriver driver) {
-
-		String invalidUrl = driver.getCurrentUrl().toString();
-		return invalidUrl;
-
-	}
-
 }

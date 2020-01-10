@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import br.com.rsinet.hub_tdd.appModules.Register_Action;
+import junit.framework.AssertionFailedError;
 
 public class Register_TC {
 	private static ChromeDriver driver;
@@ -25,6 +26,14 @@ public class Register_TC {
 		Register_Action.Execute(driver);
 
 		Assert.assertEquals("http://advantageonlineshopping.com/#/", driver.getCurrentUrl());
+	}
+	
+	@Test
+	public void invalidRegister() {
+		driver.get("http://advantageonlineshopping.com/");
+		Register_Action.ExecuteInvalid(driver);
+		
+		Assert.assertEquals("http://advantageonlineshopping.com/#/register", driver.getCurrentUrl());
 	}
 
 	@AfterClass
