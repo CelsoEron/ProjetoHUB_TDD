@@ -19,4 +19,11 @@ public class Home_Page {
 		element = driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/a[2]"));
 		return element;
 	}
+
+	public static WebElement txtUser(WebDriver driver) {
+
+		element = driver.findElement(By.xpath("//*[@id=\"menuUserLink\"]/span"));
+		return element;
+	}
+
 }
