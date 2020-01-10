@@ -11,7 +11,12 @@ public class Home_Page {
 	public static WebElement btnUser(WebDriver driver) {
 
 		element = driver.findElement(By.id("menuUser"));
+		return element;
+	}
 
+	public static WebElement btnCreate(WebDriver driver) {
+
+		element = driver.findElement(By.xpath("/html/body/login-modal/div/div/div[3]/a[2]"));
 		return element;
 	}
 }
