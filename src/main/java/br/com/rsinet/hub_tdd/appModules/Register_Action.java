@@ -10,7 +10,7 @@ import br.com.rsinet.hub_tdd.pageObjects.Register_Page;
 
 public class Register_Action {
 
-	public static void Execute(WebDriver driver) {
+	public static void ExecuteValid(WebDriver driver) {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 
@@ -21,9 +21,9 @@ public class Register_Action {
 		JavascriptExecutor jsExec = (JavascriptExecutor) driver;
 		jsExec.executeScript("arguments[0].click();", Home_Page.btnCreate(driver));
 
-		Register_Page.bx_username(driver).sendKeys("testv17");
+		Register_Page.bx_username(driver).sendKeys("testv137");
 
-		Register_Page.bx_email(driver).sendKeys("test1207@test.com");
+		Register_Page.bx_email(driver).sendKeys("test1307@test.com");
 
 		Register_Page.bx_password(driver).sendKeys("Test1234");
 
@@ -49,7 +49,7 @@ public class Register_Action {
 
 		Register_Page.btn_register(driver).click();
 
-		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txtUser(driver), "testv17"));
+		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txtUser(driver), "testv137"));
 
 	}
 

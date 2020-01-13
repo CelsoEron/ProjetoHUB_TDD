@@ -26,4 +26,21 @@ public class Home_Page {
 		return element;
 	}
 
+	public static WebElement btnSearch(WebDriver driver) {
+
+		element = driver.findElement(By.id("menuSearch"));
+		return element;
+	}
+
+	public static WebElement bxtxtSearch(WebDriver driver) {
+
+		element = driver.findElement(By.id("autoComplete"));
+		return element;
+	}
+
+	public static WebElement closeBxtxtSearch(WebDriver driver) {
+
+		element = driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/img[1]"));
+		return element;
+	}
 }
