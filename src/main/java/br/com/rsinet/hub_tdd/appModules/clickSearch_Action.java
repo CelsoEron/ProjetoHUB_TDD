@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.rsinet.hub_tdd.pageObjects.Products_Page;
 
-public class clickSearch_Action {
+public class ClickSearch_Action {
 
 	public static void Execute(WebDriver driver) throws Exception {
 

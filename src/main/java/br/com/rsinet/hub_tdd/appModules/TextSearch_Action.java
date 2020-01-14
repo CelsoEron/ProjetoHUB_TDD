@@ -10,7 +10,7 @@ import br.com.rsinet.hub_tdd.pageObjects.Home_Page;
 import br.com.rsinet.hub_tdd.pageObjects.Products_Page;
 import br.com.rsinet.hub_tdd.utility.ExcelUtils;
 
-public class Search_Action {
+public class TextSearch_Action {
 
 	public static void Execute(WebDriver driver) throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver, 100);

@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import br.com.rsinet.hub_tdd.appModules.Search_Action;
+import br.com.rsinet.hub_tdd.appModules.TextSearch_Action;
 import br.com.rsinet.hub_tdd.utility.Screenshot;
 
 public class Register_TC {

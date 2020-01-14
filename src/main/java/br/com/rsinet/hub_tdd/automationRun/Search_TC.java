@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import br.com.rsinet.hub_tdd.appModules.Search_Action;
+import br.com.rsinet.hub_tdd.appModules.TextSearch_Action;
 import br.com.rsinet.hub_tdd.utility.Constant;
 import br.com.rsinet.hub_tdd.utility.ExcelUtils;
 import br.com.rsinet.hub_tdd.utility.Screenshot;
@@ -27,7 +27,7 @@ public class Search_TC {
 	@Test
 	public void txtSearch() throws Exception {
 		driver.get("http://advantageonlineshopping.com/");
-		Search_Action.Execute(driver);
+		TextSearch_Action.Execute(driver);
 
 		Screenshot.captureScreenShot(driver);
 	}
