@@ -3,14 +3,12 @@ package br.com.rsinet.hub_tdd.automationRun;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import br.com.rsinet.hub_tdd.appModules.Register_Action;
 import br.com.rsinet.hub_tdd.appModules.Search_Action;
-import br.com.rsinet.hub_tdd.utils.Screenshot;
+import br.com.rsinet.hub_tdd.utility.Screenshot;
 
 public class Register_TC {
 	private static ChromeDriver driver;
@@ -38,14 +36,12 @@ public class Register_TC {
 //		Assert.assertEquals("http://advantageonlineshopping.com/#/register", driver.getCurrentUrl());
 //		Screenshot.captureScreenShot(driver);
 //	}
-	
-	@Test
-	public void txtSearch() {
-		driver.get("http://advantageonlineshopping.com/");
-		Search_Action.Execute(driver);
-		
-		Screenshot.captureScreenShot(driver);
-	}
+
+//	@Test
+//	public void clickSearch() {
+//		driver.get("http://advantageonlineshopping.com/");
+//		clickSearch_Action.Execute(driver);
+//	}
 
 	@AfterClass
 	public static void closeBrowser() {

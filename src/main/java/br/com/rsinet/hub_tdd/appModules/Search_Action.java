@@ -1,5 +1,6 @@
 package br.com.rsinet.hub_tdd.appModules;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -7,23 +8,25 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.rsinet.hub_tdd.pageObjects.Home_Page;
 import br.com.rsinet.hub_tdd.pageObjects.Products_Page;
+import br.com.rsinet.hub_tdd.utility.ExcelUtils;
 
 public class Search_Action {
 
-	public static void Execute(WebDriver driver) {
+	public static void Execute(WebDriver driver) throws Exception {
+		WebDriverWait wait = new WebDriverWait(driver, 100);
 
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-
-		driver.manage().window().maximize();
-		wait.until(ExpectedConditions.elementToBeClickable(Home_Page.btnSearch(driver)));
+		String sProduto = ExcelUtils.getCellData(2, 0);
 
 		Home_Page.btnSearch(driver).click();
-//
-		Home_Page.bxtxtSearch(driver).sendKeys("Pavilion");
+
+		Home_Page.bxtxtSearch(driver).sendKeys(sProduto);
 
 		Home_Page.bxtxtSearch(driver).sendKeys(Keys.ENTER);
 
 		wait.until(ExpectedConditions.urlContains("search"));
+
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", Products_Page.btnClose(driver));
 
 		wait.until(ExpectedConditions.visibilityOf(Products_Page.produto1(driver)));
 		Products_Page.produto1(driver).click();
