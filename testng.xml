@@ -1,0 +1,8 @@
+<suite name="Test - TDD">
+<test name="ProjetoLoja">
+<classes>
+<class name="br.com.rsinet.hub_tdd.automationRun.Register_TC" />
+<class name="br.com.rsinet.hub_tdd.automationRun.Search_TC" />
+</classes>
+</test>
+</suite>

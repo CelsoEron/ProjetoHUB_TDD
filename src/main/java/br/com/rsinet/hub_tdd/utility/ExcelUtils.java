@@ -42,7 +42,7 @@ public class ExcelUtils {
 
 			produtosRow = produtosSheet.getRow(RowNum);
 
-			produtosCell = produtosRow.getCell(ColNum, MissingCellPolicy.RETURN_BLANK_AS_NULL);
+			produtosCell = produtosRow.getCell(ColNum);
 
 			if (produtosCell == null) {
 

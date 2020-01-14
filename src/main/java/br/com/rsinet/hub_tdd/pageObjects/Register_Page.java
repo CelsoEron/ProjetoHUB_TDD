@@ -1,6 +1,5 @@
 package br.com.rsinet.hub_tdd.pageObjects;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +9,6 @@ public class Register_Page {
 
 	private static WebElement element = null;
 
-	private static Assert aEquals = null;
 
 	public static WebElement bx_username(WebDriver driver) {
 

@@ -11,8 +11,15 @@ public class Products_Page {
 	private static WebElement element = null;
 
 	public static WebElement produto1(WebDriver driver) throws Exception {
-		String sFullName = ExcelUtils.getCellData(2, 1);
+		String sFullName = ExcelUtils.getCellData(1, 1);
 
+		element = driver.findElement(By.linkText(sFullName));
+		return element;
+	}
+	
+	public static WebElement produto2(WebDriver driver) throws Exception {
+		String sFullName = ExcelUtils.getCellData(1, 1);
+		
 		element = driver.findElement(By.linkText(sFullName));
 		return element;
 	}
@@ -21,6 +28,18 @@ public class Products_Page {
 
 		element = driver.findElement(By.xpath("//*[@id=\"search\"]/div/div"));
 
+		return element;
+	}
+	
+	public static WebElement noFound(WebDriver driver) {
+		
+		element = driver.findElement(By.xpath("//*[@id=\"searchPage\"]/div[3]/div/label/span"));
+		return element;
+	}
+	
+	public static WebElement titleProduct(WebDriver driver) {
+		
+		element = driver.findElement(By.xpath("//*[@id=\"Description\"]/h1"));
 		return element;
 	}
 }

@@ -1,25 +1,23 @@
 package br.com.rsinet.hub_tdd.appModules;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import br.com.rsinet.hub_tdd.pageObjects.Home_Page;
 import br.com.rsinet.hub_tdd.pageObjects.Products_Page;
 
 public class ClickSearch_Action {
 
 	public static void Execute(WebDriver driver) throws Exception {
+		WebDriverWait wait = new WebDriverWait(driver, 100);
 
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", Home_Page.produtoImg(driver));
+		
 
-		driver.manage().window().maximize();
-
-		driver.findElement(By.id("laptopsImg")).click();
-
-		wait.until(ExpectedConditions.urlContains("Laptops"));
-
-		wait.until(ExpectedConditions.visibilityOf(Products_Page.produto1(driver)));
-		Products_Page.produto1(driver).click();
+		wait.until(ExpectedConditions.visibilityOf(Products_Page.produto2(driver)));
+		executor.executeScript("arguments[0].click();", Products_Page.produto2(driver));
 	}
 }

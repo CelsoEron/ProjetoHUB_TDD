@@ -43,4 +43,10 @@ public class Home_Page {
 		element = driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/img[1]"));
 		return element;
 	}
+
+	public static WebElement produtoImg(WebDriver driver) {
+
+		element = driver.findElement(By.id("laptopsImg"));
+		return element;
+	}
 }

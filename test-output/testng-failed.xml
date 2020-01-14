@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test - TDD]">
+  <test thread-count="5" name="ProjetoLoja(failed)">
+    <classes>
+      <class name="br.com.rsinet.hub_tdd.automationRun.Register_TC">
+        <methods>
+          <include name="validRegister"/>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- br.com.rsinet.hub_tdd.automationRun.Register_TC -->
+    </classes>
+  </test> <!-- ProjetoLoja(failed) -->
+</suite> <!-- Failed suite [Test - TDD] -->
