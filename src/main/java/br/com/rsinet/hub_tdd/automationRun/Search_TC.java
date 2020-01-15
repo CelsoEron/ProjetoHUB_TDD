@@ -30,7 +30,7 @@ public class Search_TC {
 		Reporter.log("Maximizando a janela do Chrome");
 	}
 
-	@Test (groups = { "Pesquisa" }, priority = 1)
+	@Test (groups = { "Pesquisa" }, priority = 3)
 	public void txtSearch() throws Exception {
 		driver.get("http://advantageonlineshopping.com/");
 		Reporter.log("Acessando o endereço da loja");
@@ -44,21 +44,21 @@ public class Search_TC {
 		Reporter.log("Tirando o print da página final");
 	}
 
+//	@Test (groups = { "Pesquisa" }, priority = 4)
+//	public void invalidTxtSearch() throws Exception {
+//		driver.get("http://advantageonlineshopping.com/");
+//		Reporter.log("Acessando o endereço da loja");
+//
+//		TextSearch_Action.InvalidExecute(driver);
+//		Reporter.log("Executando o teste inválido da pesquisa por texto");
+//		
+//		Assert.assertEquals(true, Products_Page.noFound(driver).getText().contains("No results for"));
+//		Reporter.log("Verificando se o produto buscado é inválido");
+//		Screenshot.captureScreenShot(driver);
+//		Reporter.log("Tirando print da página final");
+//	}
+
 	@Test (groups = { "Pesquisa" }, priority = 2)
-	public void invalidTxtSearch() throws Exception {
-		driver.get("http://advantageonlineshopping.com/");
-		Reporter.log("Acessando o endereço da loja");
-
-		TextSearch_Action.InvalidExecute(driver);
-		Reporter.log("Executando o teste inválido da pesquisa por texto");
-		
-		Assert.assertEquals(true, Products_Page.noFound(driver).getText().contains("No results for"));
-		Reporter.log("Verificando se o produto buscado é inválido");
-		Screenshot.captureScreenShot(driver);
-		Reporter.log("Tirando print da página final");
-	}
-
-	@Test (groups = { "Pesquisa" }, priority = 0)
 	public void clickSearch() throws Exception {
 		driver.get("http://advantageonlineshopping.com/");
 		Reporter.log("Acessando o endereço da loja");
@@ -75,7 +75,7 @@ public class Search_TC {
 		ExcelUtils.setCellData("PASS", 1, 2);
 		Reporter.log("Inserindo na massa se o teste passou");
 		
-		driver.quit();
+//		driver.quit();
 		Reporter.log("Saindo do Chrome");
 	}
 }
