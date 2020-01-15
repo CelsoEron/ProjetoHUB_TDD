@@ -23,7 +23,7 @@ public class Register_Action {
 
 		Register_Page.bx_username(driver).sendKeys("testv1317");
 
-		Register_Page.bx_email(driver).sendKeys("test13107@test.com");
+		Register_Page.bx_email(driver).sendKeys("test017@test.com");
 
 		Register_Page.bx_password(driver).sendKeys("Test1234");
 

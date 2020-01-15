@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Test_-_TDD">
-                    <span>0 groups</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -114,6 +114,11 @@
                       <a href="#" panel-name="suite-Test_-_TDD" class="show-methods passed suite-Test_-_TDD"> (show)</a> <!-- show-methods passed suite-Test_-_TDD -->
                     </span>
                     <div class="method-list-content passed suite-Test_-_TDD">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Test_-_TDD" title="br.com.rsinet.hub_tdd.automationRun.Search_TC" hash-for-method="clickSearch">clickSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Test_-_TDD" title="br.com.rsinet.hub_tdd.automationRun.Register_TC" hash-for-method="invalidRegister">invalidRegister</a> <!-- method navigator-link -->
@@ -152,16 +157,16 @@
                   <a name="validRegister">
                   </a> <!-- validRegister -->
                   <span class="method-name">validRegister</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;testv1317&apos;) to be present in element [[ChromeDriver: chrome on XP (cb3f8e2079458f6be3edd4413334d4dd)] -&gt; xpath: //*[@id=&quot;menuUserLink&quot;]/span] (tried for 10 second(s) with 500 milliseconds interval)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for text (&apos;testv1317&apos;) to be present in element [[ChromeDriver: chrome on XP (e3d284b60f80470e959a33ff07906446)] -&gt; xpath: //*[@id=&quot;menuUserLink&quot;]/span] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;RSI1532&apos;, ip: &apos;10.1.0.114&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\CELSO~1.SIL\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:55150}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: cb3f8e2079458f6be3edd4413334d4dd
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\CELSO~1.SIL\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:55611}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e3d284b60f80470e959a33ff07906446
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at br.com.rsinet.hub_tdd.appModules.Register_Action.ExecuteValid(Register_Action.java:52)
-	at br.com.rsinet.hub_tdd.automationRun.Register_TC.validRegister(Register_TC.java:25)
+	at br.com.rsinet.hub_tdd.automationRun.Register_TC.validRegister(Register_TC.java:33)
 ... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -189,6 +194,13 @@ Session ID: cb3f8e2079458f6be3edd4413334d4dd
               <span class="class-name">br.com.rsinet.hub_tdd.automationRun.Search_TC</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickSearch">
+                  </a> <!-- clickSearch -->
+                  <span class="method-name">clickSearch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="invalidTxtSearch">
@@ -242,6 +254,34 @@ Session ID: cb3f8e2079458f6be3edd4413334d4dd
             <span class="header-content">Groups for Test - TDD</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Cadastro</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">invalidRegister</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">validRegister</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Pesquisa</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">clickSearch</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">invalidTxtSearch</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">txtSearch</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Test_-_TDD" class="panel">
@@ -258,28 +298,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validRegister')
 data.setCell(0, 2, 'br.com.rsinet.hub_tdd.automationRun.Register_TC')
-data.setCell(0, 3, 13687);
+data.setCell(0, 3, 18593);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'invalidRegister')
 data.setCell(1, 2, 'br.com.rsinet.hub_tdd.automationRun.Register_TC')
-data.setCell(1, 3, 5077);
+data.setCell(1, 3, 6995);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'txtSearch')
+data.setCell(2, 1, 'clickSearch')
 data.setCell(2, 2, 'br.com.rsinet.hub_tdd.automationRun.Search_TC')
-data.setCell(2, 3, 3798);
+data.setCell(2, 3, 5758);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'invalidTxtSearch')
+data.setCell(3, 1, 'txtSearch')
 data.setCell(3, 2, 'br.com.rsinet.hub_tdd.automationRun.Search_TC')
-data.setCell(3, 3, 3531);
+data.setCell(3, 3, 4257);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'invalidTxtSearch')
+data.setCell(4, 2, 'br.com.rsinet.hub_tdd.automationRun.Search_TC')
+data.setCell(4, 3, 2939);
 window.suiteTableData['Test_-_TDD']= { tableData: data, tableDiv: 'times-div-Test_-_TDD'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-Test_-_TDD">
               </div> <!-- times-div-Test_-_TDD -->
             </div> <!-- times-div -->
@@ -290,6 +334,46 @@ return data;
             <span class="header-content">Reporter output for Test - TDD</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">invalidTxtSearch</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Acessando o endereço da loja</span>
+                <span class="reporter-method-output">Executando o teste inválido da pesquisa por texto</span>
+                <span class="reporter-method-output">Verificando se o produto buscado é inválido</span>
+                <span class="reporter-method-output">Tirando print da página final</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">txtSearch</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Acessando o endereço da loja</span>
+                <span class="reporter-method-output">Executando o teste válido da pesquisa por texto</span>
+                <span class="reporter-method-output">Verificando se o produto buscado é o mesmo na massa de dados</span>
+                <span class="reporter-method-output">Tirando o print da página final</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">clickSearch</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Acessando o endereço da loja</span>
+                <span class="reporter-method-output">Executando o teste válido da pesquisa por clicks</span>
+                <span class="reporter-method-output">Tirando print da página final</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">invalidRegister</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Executando o teste inválido do registro</span>
+                <span class="reporter-method-output">Verificando se a página final é a cadastro para cadastros com falha</span>
+                <span class="reporter-method-output">Tirando o print da página final</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validRegister</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Acessando o endereço da loja</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Test_-_TDD" class="panel">
@@ -311,37 +395,47 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">invalidRegister</span>
-                <span class="method-start">6017 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">validRegister</span>
-                <span class="method-start">11096 ms</span>
+                <span class="method-start">10289 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">24785 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">br.com.rsinet.hub_tdd.automationRun.Search_TC</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">openBrowser</span>
-                <span class="method-start">25405 ms</span>
+                <span class="method-start">28905 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">invalidTxtSearch</span>
-                <span class="method-start">34923 ms</span>
+                <span class="method-name">clickSearch</span>
+                <span class="method-start">39292 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.automationRun.Register_TC</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">txtSearch</span>
-                <span class="method-start">38455 ms</span>
+                <span class="method-name">invalidRegister</span>
+                <span class="method-start">45051 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">42254 ms</span>
+                <span class="method-start">52047 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">br.com.rsinet.hub_tdd.automationRun.Search_TC</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">txtSearch</span>
+                <span class="method-start">52694 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">invalidTxtSearch</span>
+                <span class="method-start">56952 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">59894 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
