@@ -21,9 +21,9 @@ public class Register_Action {
 		JavascriptExecutor jsExec = (JavascriptExecutor) driver;
 		jsExec.executeScript("arguments[0].click();", Home_Page.btnCreate(driver));
 
-		Register_Page.bx_username(driver).sendKeys("CelsoErE");
+		Register_Page.bx_username(driver).sendKeys("CelsoEroE");
 
-		Register_Page.bx_email(driver).sendKeys("celsor@test.com");
+		Register_Page.bx_email(driver).sendKeys("celsoro@test.com");
 
 		Register_Page.bx_password(driver).sendKeys("Test1234");
 
@@ -49,7 +49,7 @@ public class Register_Action {
 
 		Register_Page.btn_register(driver).click();
 
-		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txtUser(driver), "CelsoErE"));
+		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txtUser(driver), "CelsoEroE"));
 
 	}
 

@@ -49,4 +49,17 @@ public class Home_Page {
 		element = driver.findElement(By.id("laptopsImg"));
 		return element;
 	}
+
+	public static WebElement detailsProduct(WebDriver driver) {
+
+		element = driver.findElement(By.id("details_10"));
+		return element;
+	}
+
+	public static String txtDetailsProduct(WebDriver driver) {
+
+		element = driver.findElement(By.xpath("//*[@id=\"popular_items\"]/div/div[2]/p"));
+		String txtElement = element.getText();
+		return txtElement;
+	}
 }

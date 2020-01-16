@@ -17,7 +17,14 @@ public class ClickSearch_Action {
 		executor.executeScript("arguments[0].click();", Home_Page.produtoImg(driver));
 		
 
-		wait.until(ExpectedConditions.visibilityOf(Products_Page.produto2(driver)));
-		executor.executeScript("arguments[0].click();", Products_Page.produto2(driver));
+		wait.until(ExpectedConditions.visibilityOf(Products_Page.produtoProcurado(driver)));
+		executor.executeScript("arguments[0].click();", Products_Page.produtoProcurado(driver));
+	}
+	
+	public static void ExecuteInvalid(WebDriver driver) throws Exception {
+
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", Home_Page.detailsProduct(driver));
+		
 	}
 }

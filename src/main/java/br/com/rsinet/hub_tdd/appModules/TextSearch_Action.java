@@ -28,9 +28,9 @@ public class TextSearch_Action {
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", Products_Page.btnClose(driver));
 
-		wait.until(ExpectedConditions.visibilityOf(Products_Page.produto2(driver)));
+		wait.until(ExpectedConditions.visibilityOf(Products_Page.produtoProcurado(driver)));
 
-		executor.executeScript("arguments[0].click();", Products_Page.produto2(driver));
+		executor.executeScript("arguments[0].click();", Products_Page.produtoProcurado(driver));
 
 	}
 

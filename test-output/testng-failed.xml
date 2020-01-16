@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="br.com.rsinet.hub_tdd.automationRun.Register_TC">
+      <class name="br.com.rsinet.hub_tdd.automationRun.Search_TC">
         <methods>
-          <include name="validRegister"/>
+          <include name="txtSearch"/>
           <include name="openBrowser"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- br.com.rsinet.hub_tdd.automationRun.Register_TC -->
+      </class> <!-- br.com.rsinet.hub_tdd.automationRun.Search_TC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
