@@ -1,8 +1,6 @@
 package br.com.rsinet.hub_tdd.automationRun;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -10,24 +8,23 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import br.com.rsinet.hub_tdd.appModules.Register_Action;
+import br.com.rsinet.hub_tdd.driverFactory.DriverManager;
 import br.com.rsinet.hub_tdd.utility.Screenshot;
 
 public class Register_TC {
-	private static ChromeDriver driver;
+	
+	private static WebDriver driver;
 
 	@BeforeClass
 	public static void openBrowser() {
-		driver = new ChromeDriver();
+		driver = DriverManager.startChrome();
 		Reporter.log("Abrindo o Chrome Browser");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		driver.manage().window().maximize();
-		Reporter.log("Maximizando a janela do Chrome");
 	}
 
 	@Test(groups = { "Cadastro" }, priority = 0)
 	public void validRegister() {
-		driver.get("http://advantageonlineshopping.com/");
+		DriverManager.openWebSite(driver);
 		Reporter.log("Acessando o endereço da loja");
 
 		Register_Action.ExecuteValid(driver);
@@ -41,7 +38,9 @@ public class Register_TC {
 
 	@Test(groups = { "Cadastro" }, priority = 1)
 	public void invalidRegister() {
-		driver.get("http://advantageonlineshopping.com/");
+		DriverManager.openWebSite(driver);
+		Reporter.log("Acessando o endereço da loja");
+
 		Register_Action.ExecuteInvalid(driver);
 		Reporter.log("Executando o teste inválido do registro");
 
@@ -55,7 +54,7 @@ public class Register_TC {
 
 	@AfterClass
 	public static void closeBrowser() {
-		driver.quit();
+		DriverManager.closeChrome(driver);
 		Reporter.log("Saindo do Chrome");
 	}
 }
