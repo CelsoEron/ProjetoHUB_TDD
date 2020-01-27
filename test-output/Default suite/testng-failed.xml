@@ -5,7 +5,6 @@
     <classes>
       <class name="br.com.rsinet.hub_tdd.automationRun.Register_TC">
         <methods>
-          <include name="invalidRegister"/>
           <include name="validRegister"/>
           <include name="openBrowser"/>
           <include name="closeBrowser"/>

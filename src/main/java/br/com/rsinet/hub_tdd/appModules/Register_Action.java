@@ -11,6 +11,8 @@ import br.com.rsinet.hub_tdd.pageObjects.Register_Page;
 public class Register_Action {
 
 	public static void ExecuteValid(WebDriver driver) {
+		
+		String user = "Celso113";
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 
@@ -21,7 +23,7 @@ public class Register_Action {
 		JavascriptExecutor jsExec = (JavascriptExecutor) driver;
 		jsExec.executeScript("arguments[0].click();", Home_Page.btnCreate(driver));
 
-		Register_Page.bx_username(driver).sendKeys("CelsoEroE");
+		Register_Page.bx_username(driver).sendKeys(user);
 
 		Register_Page.bx_email(driver).sendKeys("celsoro@test.com");
 
@@ -49,7 +51,7 @@ public class Register_Action {
 
 		Register_Page.btn_register(driver).click();
 
-		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txtUser(driver), "CelsoEroE"));
+		wait.until(ExpectedConditions.textToBePresentInElement(Home_Page.txtUser(driver), user));
 
 	}
 
@@ -91,6 +93,9 @@ public class Register_Action {
 		Register_Page.chk_agree(driver).click();
 
 		Register_Page.btn_register(driver).click();
+		
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("window.scrollBy(0,100)");
 
 //		String invalidMessage = Register_Page.invalidRegister(driver).getText();
 
