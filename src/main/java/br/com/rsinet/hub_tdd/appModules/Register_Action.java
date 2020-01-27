@@ -12,7 +12,7 @@ public class Register_Action {
 
 	public static void ExecuteValid(WebDriver driver) {
 		
-		String user = "Celso113";
+		String user = "CelsoT1";
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 
